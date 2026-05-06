@@ -1,4 +1,7 @@
 input.onGesture(Gesture.Shake, function () {
+	
+})
+input.onSound(DetectedSound.Loud, function () {
     basic.showLeds(`
         . # # # .
         . # . # .
@@ -7,67 +10,11 @@ input.onGesture(Gesture.Shake, function () {
         . # # # .
         `)
     basic.showLeds(`
-        . . # # #
-        . . # . #
-        . . # . #
-        . # # # #
-        . . # # #
-        `)
-    basic.showLeds(`
-        . . . # #
-        . . . # .
-        . . . # .
-        . . # # #
-        . . . # #
-        `)
-    basic.showLeds(`
-        . . . . #
-        . . . . #
-        . . . . #
-        . . . # #
-        . . . . #
-        `)
-    basic.showLeds(`
+        . # . # .
+        . # . # .
+        # # # # #
+        . # # # .
         . . . . .
-        . . . . .
-        . . . . .
-        . . . . #
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . #
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . #
-        . . . . #
-        . . . . #
-        . . . # #
-        . . . . #
-        `)
-    basic.showLeds(`
-        . . . # #
-        . . . # .
-        . . . # .
-        . . # # #
-        . . . # #
-        `)
-    basic.showLeds(`
-        . . # # #
-        . . # . #
-        . . # . #
-        . # # # #
-        . . # # #
         `)
     basic.showLeds(`
         . # # # .
@@ -332,7 +279,6 @@ input.onButtonPressed(Button.B, function () {
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     happy += 0 + 1
-    led.stopAnimation()
     basic.showLeds(`
         . # . # .
         . # . # .
@@ -570,21 +516,7 @@ basic.forever(function () {
             `)
         basic.showLeds(`
             . . . . .
-            # . . . #
             . . . . .
-            . # # # .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . # # # .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . . . .
-            # . . . #
             . . . . .
             . # # # .
             . . . . .
@@ -598,24 +530,10 @@ basic.forever(function () {
             `)
     } else if (health >= 5) {
         basic.showLeds(`
-            . . . . .
-            . # . # .
-            . . . . .
-            # . . . #
             . # # # .
-            `)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            # . . . #
-            . # # # .
-            `)
-        basic.showLeds(`
-            . . . . .
             . # . # .
-            . . . . .
-            # . . . #
+            . # . # .
+            # # # # #
             . # # # .
             `)
     }
@@ -631,8 +549,14 @@ basic.forever(function () {
     basic.pause(4000)
 })
 basic.forever(function () {
+    basic.pause(12000)
+    happy += 0 - 1
+    health += 0 - 1
+    hunger += 0 - 1
+})
+basic.forever(function () {
     while (happy >= 6) {
-        basic.pause(5000)
+        basic.pause(8000)
         basic.showLeds(`
             . # # # .
             . # . # .
@@ -655,7 +579,7 @@ basic.forever(function () {
             . . . . .
             `)
         basic.showLeds(`
-            . # # # .
+            . # . # .
             . # . # .
             # # # # #
             . # # # .
@@ -669,10 +593,4 @@ basic.forever(function () {
             . # # # .
             `)
     }
-})
-basic.forever(function () {
-    basic.pause(12000)
-    happy += 0 - 1
-    health += 0 - 1
-    hunger += 0 - 1
 })
