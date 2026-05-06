@@ -224,6 +224,86 @@ input.onButtonPressed(Button.AB, function () {
             # # # . .
             # # # . .
             `)
+    } else if (health == 16) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # # .
+            `)
+    } else if (health == 17) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # # .
+            # # # # .
+            `)
+    } else if (health == 18) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # # .
+            # # # # .
+            # # # # .
+            `)
+    } else if (health == 19) {
+        basic.showLeds(`
+            # # # . .
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            `)
+    } else if (health == 20) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            `)
+    } else if (health == 21) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # #
+            `)
+    } else if (health == 22) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # #
+            # # # # #
+            `)
+    } else if (health == 23) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    } else if (health == 24) {
+        basic.showLeds(`
+            # # # # .
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    } else if (health == 25) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -465,7 +545,7 @@ if (health > 5) {
     health = 5
 }
 basic.forever(function () {
-    if (health <= 2) {
+    if (health <= 3) {
         basic.showLeds(`
             . . . . .
             . # . # .
@@ -480,7 +560,7 @@ basic.forever(function () {
             . # # # .
             # . . . #
             `)
-    } else if (health == 3) {
+    } else if (health == 4) {
         basic.showLeds(`
             . . . . .
             # # . # #
@@ -516,7 +596,7 @@ basic.forever(function () {
             . # # # .
             . . . . .
             `)
-    } else if (health >= 4) {
+    } else if (health >= 5) {
         basic.showLeds(`
             . . . . .
             . # . # .
@@ -575,7 +655,7 @@ basic.forever(function () {
             . . . . .
             `)
         basic.showLeds(`
-            . # . # .
+            . # # # .
             . # . # .
             # # # # #
             . # # # .
@@ -595,9 +675,4 @@ basic.forever(function () {
     happy += 0 - 1
     health += 0 - 1
     hunger += 0 - 1
-})
-basic.forever(function () {
-    if (health <= 0) {
-    	
-    }
 })
