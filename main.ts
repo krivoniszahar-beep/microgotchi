@@ -465,52 +465,6 @@ if (health > 5) {
     health = 5
 }
 basic.forever(function () {
-    while (happy >= 6) {
-        basic.pause(5000)
-        basic.showLeds(`
-            . # # # .
-            . # . # .
-            . # . # .
-            # # # # #
-            . # # # .
-            `)
-        basic.showLeds(`
-            . # . # .
-            . # . # .
-            # # # # #
-            . # # # .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . # . # .
-            # # # # #
-            . # # # .
-            . . . . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . # . # .
-            . # . # .
-            # # # # #
-            . # # # .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . # # # .
-            . # . # .
-            . # . # .
-            # # # # #
-            . # # # .
-            `)
-    }
-})
-basic.forever(function () {
-    basic.pause(15000)
-    happy += 0 - 1
-    health += 0 - 1
-    hunger += 0 - 1
-})
-basic.forever(function () {
     if (health <= 2) {
         basic.showLeds(`
             . . . . .
@@ -595,6 +549,52 @@ basic.forever(function () {
         basic.showIcon(IconNames.Skull)
     }
     basic.pause(4000)
+})
+basic.forever(function () {
+    while (happy >= 6) {
+        basic.pause(5000)
+        basic.showLeds(`
+            . # # # .
+            . # . # .
+            . # . # .
+            # # # # #
+            . # # # .
+            `)
+        basic.showLeds(`
+            . # . # .
+            . # . # .
+            # # # # #
+            . # # # .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . # . # .
+            # # # # #
+            . # # # .
+            . . . . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . # . # .
+            . # . # .
+            # # # # #
+            . # # # .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . # # # .
+            . # . # .
+            . # . # .
+            # # # # #
+            . # # # .
+            `)
+    }
+})
+basic.forever(function () {
+    basic.pause(12000)
+    happy += 0 - 1
+    health += 0 - 1
+    hunger += 0 - 1
 })
 basic.forever(function () {
     if (health <= 0) {
