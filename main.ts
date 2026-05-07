@@ -556,7 +556,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     while (happy >= 6) {
-        basic.pause(8000)
+        basic.pause(10000)
         basic.showLeds(`
             . # # # .
             . # . # .
