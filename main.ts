@@ -243,7 +243,7 @@ input.onButtonPressed(Button.AB, function () {
             # # # # #
             # # # # #
             `)
-    } else if (health == 25) {
+    } else if (health >= 25) {
         basic.showLeds(`
             # # # # #
             # # # # #
