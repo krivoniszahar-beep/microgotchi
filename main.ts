@@ -690,7 +690,6 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone)
     happy += 0 + 1
     basic.showLeds(`
         . # . # .
@@ -713,6 +712,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
         # . . . #
         . # # # .
         `)
+    music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
 })
 let happy = 0
 let health = 0
@@ -960,6 +960,7 @@ basic.forever(function () {
             . . . . .
             `)
     } else if (health >= 5) {
+        music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
         basic.showLeds(`
             . # # # .
             . # . # .
