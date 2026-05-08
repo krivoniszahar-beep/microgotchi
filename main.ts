@@ -960,7 +960,6 @@ basic.forever(function () {
             . . . . .
             `)
     } else if (health >= 5) {
-        music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.UntilDone)
         basic.showLeds(`
             . # # # .
             . # . # .
