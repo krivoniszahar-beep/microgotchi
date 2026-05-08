@@ -1033,12 +1033,12 @@ basic.forever(function () {
 basic.forever(function () {
     basic.pause(6000)
     if (hunger > 3) {
-        health += 0 + 2
-    } else if (happy > 3) {
+        health += 0 + 1
+    } else if (happy > 5) {
         health += 0 + 1
     }
 })
-loops.everyInterval(12000, function () {
+loops.everyInterval(8000, function () {
     happy += 0 - 1
     health += 0 - 1
     hunger += 0 - 1
