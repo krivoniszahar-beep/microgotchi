@@ -981,13 +981,13 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (health > 25) {
-        happy = 25
+        health = 25
     }
     if (hunger > 25) {
         hunger = 25
     }
-    if (health > 25) {
-        health = 25
+    if (happy > 25) {
+        happy = 25
     }
 })
 basic.forever(function () {
@@ -1031,9 +1031,9 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    basic.pause(8000)
+    basic.pause(6000)
     if (hunger > 3) {
-        health += 0 + 1
+        health += 0 + 2
     } else if (happy > 3) {
         health += 0 + 1
     }
