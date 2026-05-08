@@ -913,7 +913,7 @@ if (happy > 5) {
     happy = 5
 }
 basic.forever(function () {
-    if (health <= 5) {
+    if (health <= 2) {
         music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
         basic.showLeds(`
             . . . . .
@@ -936,7 +936,7 @@ basic.forever(function () {
             . # # # .
             # . . . #
             `)
-    } else if (health == 6) {
+    } else if (health == 3) {
         music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.UntilDone)
         basic.showLeds(`
             . . . . .
@@ -959,7 +959,7 @@ basic.forever(function () {
             . # # # .
             . . . . .
             `)
-    } else if (health >= 8) {
+    } else if (health >= 5) {
         basic.showLeds(`
             . # # # .
             . # . # .
