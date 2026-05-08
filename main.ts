@@ -36,7 +36,7 @@ input.onGesture(Gesture.Shake, function () {
         . # # # .
         `)
 })
-input.onButtonPressed(Button.A, function () {
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     hunger += 0 + 1
     basic.showLeds(`
         . # . # .
@@ -52,6 +52,430 @@ input.onButtonPressed(Button.A, function () {
         . # # # .
         . # # # .
         `)
+})
+input.onButtonPressed(Button.A, function () {
+    basic.clearScreen()
+    if (hunger == 1) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            # . . . .
+            `)
+    } else if (hunger == 2) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            # . . . .
+            # . . . .
+            `)
+    } else if (hunger == 3) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            `)
+    } else if (hunger == 4) {
+        basic.showLeds(`
+            . . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            `)
+    } else if (hunger == 5) {
+        basic.showLeds(`
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            `)
+    } else if (hunger == 6) {
+        basic.showLeds(`
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # # . . .
+            `)
+    } else if (hunger == 7) {
+        basic.showLeds(`
+            # . . . .
+            # . . . .
+            # . . . .
+            # # . . .
+            # # . . .
+            `)
+    } else if (hunger == 8) {
+        basic.showLeds(`
+            # . . . .
+            # . . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            `)
+    } else if (hunger == 9) {
+        basic.showLeds(`
+            # . . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            `)
+    } else if (hunger == 10) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            `)
+    } else if (hunger == 11) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            # # # . .
+            `)
+    } else if (hunger == 12) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # . . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (hunger == 12) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # . . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (hunger == 13) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # # . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (hunger == 14) {
+        basic.showLeds(`
+            # # . . .
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (hunger == 15) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (hunger == 16) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # # .
+            `)
+    } else if (hunger == 17) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # # .
+            # # # # .
+            `)
+    } else if (hunger == 18) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # # .
+            # # # # .
+            # # # # .
+            `)
+    } else if (hunger == 19) {
+        basic.showLeds(`
+            # # # . .
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            `)
+    } else if (hunger == 20) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            `)
+    } else if (hunger == 21) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # #
+            `)
+    } else if (hunger == 22) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # #
+            # # # # #
+            `)
+    } else if (hunger == 23) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    } else if (hunger == 24) {
+        basic.showLeds(`
+            # # # # .
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    } else if (hunger >= 25) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    }
+})
+input.onButtonPressed(Button.AB, function () {
+    basic.clearScreen()
+    if (happy == 1) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            # . . . .
+            `)
+    } else if (happy == 2) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            # . . . .
+            # . . . .
+            `)
+    } else if (happy == 3) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            `)
+    } else if (happy == 4) {
+        basic.showLeds(`
+            . . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            `)
+    } else if (happy == 5) {
+        basic.showLeds(`
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            `)
+    } else if (happy == 6) {
+        basic.showLeds(`
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # # . . .
+            `)
+    } else if (happy == 7) {
+        basic.showLeds(`
+            # . . . .
+            # . . . .
+            # . . . .
+            # # . . .
+            # # . . .
+            `)
+    } else if (happy == 8) {
+        basic.showLeds(`
+            # . . . .
+            # . . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            `)
+    } else if (happy == 9) {
+        basic.showLeds(`
+            # . . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            `)
+    } else if (happy == 10) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            `)
+    } else if (happy == 11) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # . . .
+            # # . . .
+            # # # . .
+            `)
+    } else if (happy == 12) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # . . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (happy == 12) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # . . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (happy == 13) {
+        basic.showLeds(`
+            # # . . .
+            # # . . .
+            # # # . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (happy == 14) {
+        basic.showLeds(`
+            # # . . .
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (happy == 15) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            `)
+    } else if (happy == 16) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # # .
+            `)
+    } else if (happy == 17) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # . .
+            # # # # .
+            # # # # .
+            `)
+    } else if (happy == 18) {
+        basic.showLeds(`
+            # # # . .
+            # # # . .
+            # # # # .
+            # # # # .
+            # # # # .
+            `)
+    } else if (happy == 19) {
+        basic.showLeds(`
+            # # # . .
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            `)
+    } else if (happy == 20) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            `)
+    } else if (happy == 21) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # #
+            `)
+    } else if (happy == 22) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # .
+            # # # # #
+            # # # # #
+            `)
+    } else if (happy == 23) {
+        basic.showLeds(`
+            # # # # .
+            # # # # .
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    } else if (happy == 24) {
+        basic.showLeds(`
+            # # # # .
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    } else if (happy >= 25) {
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+    }
 })
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
@@ -290,11 +714,13 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
         . # # # .
         `)
 })
+let happy = 0
 let health = 0
+let hunger = 0
 music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone)
-let hunger = 5
+hunger = 5
 health = 5
-let happy = 5
+happy = 5
 basic.showLeds(`
     . # # # .
     # # # # #
