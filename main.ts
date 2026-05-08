@@ -1,7 +1,5 @@
 input.onGesture(Gesture.Shake, function () {
-	
-})
-input.onSound(DetectedSound.Loud, function () {
+    music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
     basic.showLeds(`
         . # # # .
         . # . # .
@@ -10,11 +8,25 @@ input.onSound(DetectedSound.Loud, function () {
         . # # # .
         `)
     basic.showLeds(`
-        . # . # .
-        . # . # .
-        # # # # #
-        . # # # .
+        . . . . #
+        . . . . #
+        . . . . #
+        . . . # #
+        . . . . #
+        `)
+    basic.showLeds(`
         . . . . .
+        . . . . .
+        . . . . .
+        . . . . #
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . #
+        . . . . #
+        . . . . #
+        . . . # #
+        . . . . #
         `)
     basic.showLeds(`
         . # # # .
@@ -41,7 +53,7 @@ input.onButtonPressed(Button.A, function () {
         . # # # .
         `)
 })
-input.onButtonPressed(Button.AB, function () {
+input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
     if (health == 1) {
         basic.showLeds(`
@@ -253,31 +265,8 @@ input.onButtonPressed(Button.AB, function () {
             `)
     }
 })
-input.onButtonPressed(Button.B, function () {
-    health += 0 + 1
-    basic.showLeds(`
-        . # . # .
-        # # # # #
-        # # # # #
-        . # # # .
-        . . # . .
-        `)
-    basic.showLeds(`
-        . # . . .
-        # # # . #
-        # # # . #
-        . # # # .
-        . . # . .
-        `)
-    basic.showLeds(`
-        . # . # .
-        # # # # #
-        # # # # #
-        . # # # .
-        . . # . .
-        `)
-})
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone)
     happy += 0 + 1
     basic.showLeds(`
         . # . # .
@@ -302,6 +291,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
         `)
 })
 let health = 0
+music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone)
 let hunger = 5
 health = 5
 let happy = 5
@@ -490,11 +480,25 @@ basic.showLeds(`
 if (health > 5) {
     health = 5
 }
+if (hunger > 5) {
+    hunger = 5
+}
+if (happy > 5) {
+    happy = 5
+}
 basic.forever(function () {
     if (health <= 3) {
+        music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
         basic.showLeds(`
             . . . . .
             . # . # .
+            . . . . .
+            . # # # .
+            # . . . #
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
             . . . . .
             . # # # .
             # . . . #
@@ -507,6 +511,7 @@ basic.forever(function () {
             # . . . #
             `)
     } else if (health == 4) {
+        music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.UntilDone)
         basic.showLeds(`
             . . . . .
             # # . # #
@@ -549,10 +554,15 @@ basic.forever(function () {
     basic.pause(4000)
 })
 basic.forever(function () {
-    basic.pause(12000)
-    happy += 0 - 1
-    health += 0 - 1
-    hunger += 0 - 1
+    if (health > 25) {
+        happy = 25
+    }
+    if (hunger > 25) {
+        hunger = 25
+    }
+    if (health > 25) {
+        health = 25
+    }
 })
 basic.forever(function () {
     while (happy >= 6) {
@@ -593,4 +603,17 @@ basic.forever(function () {
             . # # # .
             `)
     }
+})
+basic.forever(function () {
+    basic.pause(8000)
+    if (hunger > 3) {
+        health += 0 + 1
+    } else if (happy > 3) {
+        health += 0 + 1
+    }
+})
+loops.everyInterval(12000, function () {
+    happy += 0 - 1
+    health += 0 - 1
+    hunger += 0 - 1
 })
