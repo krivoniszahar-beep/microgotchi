@@ -1,40 +1,40 @@
 input.onGesture(Gesture.Shake, function () {
+    basic.showLeds(`
+        . # # # .
+        . # . # .
+        . # . # .
+        # # # # #
+        . # # # .
+        `)
+    basic.showLeds(`
+        . . . . #
+        . . . . #
+        . . . . #
+        . . . # #
+        . . . . #
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . #
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . #
+        . . . . #
+        . . . . #
+        . . . # #
+        . . . . #
+        `)
+    basic.showLeds(`
+        . # # # .
+        . # . # .
+        . # . # .
+        # # # # #
+        . # # # .
+        `)
     music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
-    basic.showLeds(`
-        . # # # .
-        . # . # .
-        . # . # .
-        # # # # #
-        . # # # .
-        `)
-    basic.showLeds(`
-        . . . . #
-        . . . . #
-        . . . . #
-        . . . # #
-        . . . . #
-        `)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . #
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . #
-        . . . . #
-        . . . . #
-        . . . # #
-        . . . . #
-        `)
-    basic.showLeds(`
-        . # # # .
-        . # . # .
-        . # . # .
-        # # # # #
-        . # # # .
-        `)
 })
 input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     hunger += 0 + 1
@@ -980,17 +980,6 @@ basic.forever(function () {
     basic.pause(4000)
 })
 basic.forever(function () {
-    if (health > 25) {
-        health = 25
-    }
-    if (hunger > 25) {
-        hunger = 25
-    }
-    if (happy > 25) {
-        happy = 25
-    }
-})
-basic.forever(function () {
     while (happy >= 6) {
         basic.pause(10000)
         basic.showLeds(`
@@ -1028,6 +1017,17 @@ basic.forever(function () {
             # # # # #
             . # # # .
             `)
+    }
+})
+basic.forever(function () {
+    if (health > 25) {
+        health = 25
+    }
+    if (hunger > 25) {
+        hunger = 25
+    }
+    if (happy > 25) {
+        happy = 25
     }
 })
 basic.forever(function () {
