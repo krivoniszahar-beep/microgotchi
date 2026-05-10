@@ -35,6 +35,7 @@ input.onGesture(Gesture.Shake, function () {
         . # # # .
         `)
     music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
+    health += 0 - 1
 })
 input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
     hunger += 0 + 1
@@ -1020,17 +1021,6 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (health > 25) {
-        health = 25
-    }
-    if (hunger > 25) {
-        hunger = 25
-    }
-    if (happy > 25) {
-        happy = 25
-    }
-})
-basic.forever(function () {
     basic.pause(6000)
     if (hunger > 3) {
         health += 0 + 1
@@ -1040,6 +1030,8 @@ basic.forever(function () {
 })
 loops.everyInterval(8000, function () {
     happy += 0 - 1
-    health += 0 - 1
     hunger += 0 - 1
+})
+loops.everyInterval(5000, function () {
+    health += 0 - 1
 })
